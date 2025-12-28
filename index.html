@@ -3,213 +3,462 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ibrahima Cissé Willy - Servicios Lingüísticos Barcelona</title>
+    <meta name="description" content="Profesor multilingüe en Barcelona. Clases de árabe, francés e inglés. Traducción e interpretación. Ayuda a Ibrahima a reconstruir su vida mediante sus habilidades.">
+    <meta name="keywords" content="clases de árabe Barcelona, traductor francés Barcelona, intérprete árabe español Barcelona, profesor de idiomas Barcelona">
+    <title>Ibrahima Cisse - Servicios Lingüísticos en Barcelona | Clases de Árabe, Francés, Inglés</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        
+        :root {
+            --color-primary: #2563eb;
+            --color-secondary: #10b981;
+            --color-accent: #f59e0b;
+            --color-dark: #1e293b;
+            --color-light: #f8fafc;
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Open Sans', sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: var(--color-dark);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
         }
         
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 3rem 2rem;
-            text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            padding: 1rem 0;
         }
         
-        .header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-        
-        .container {
+        .header .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         
-        .section {
-            margin: 3rem 0;
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            text-decoration: none;
         }
         
-        .section h2 {
-            color: #667eea;
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 0.5rem;
-        }
-        
-        .languages {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin: 2rem 0;
-        }
-        
-        .language-card {
-            background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 10px;
-            text-align: center;
-            border: 2px solid #667eea;
-            transition: transform 0.3s ease;
-        }
-        
-        .language-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
-        }
-        
-        .language-card .flag {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .services {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 10px;
-        }
-        
-        .services ul {
+        nav ul {
+            display: flex;
             list-style: none;
-            padding-left: 0;
+            gap: 2rem;
         }
         
-        .services li {
-            padding: 1rem;
-            margin: 0.5rem 0;
-            background: white;
-            border-left: 4px solid #667eea;
-            border-radius: 5px;
-            font-size: 1.1rem;
+        nav a {
+            text-decoration: none;
+            color: var(--color-dark);
+            font-weight: 600;
+            transition: color 0.3s;
         }
         
-        .services li strong {
-            color: #667eea;
+        nav a:hover {
+            color: var(--color-primary);
         }
         
-        .contact {
+        .hero {
+            background: linear-gradient(135deg, var(--color-primary) 0%, #1e40af 100%);
+            color: white;
+            padding: 8rem 2rem 5rem;
             text-align: center;
-            padding: 3rem 2rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-radius: 10px;
-            margin: 3rem 0;
+            margin-top: 70px;
         }
         
-        .contact h2 {
-            color: white;
-            border: none;
+        .hero h1 {
+            font-size: 3rem;
             margin-bottom: 1rem;
         }
         
-        .contact p {
-            font-size: 1.2rem;
-            margin: 1rem 0;
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
         }
         
         .btn {
             display: inline-block;
             padding: 1rem 2rem;
-            background: white;
-            color: #667eea;
+            border-radius: 8px;
             text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            margin-top: 1rem;
-            transition: all 0.3s ease;
+            font-weight: 600;
+            transition: all 0.3s;
         }
         
-        .btn:hover {
-            background: #f8f9fa;
+        .btn-primary {
+            background: var(--color-secondary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #059669;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: var(--color-primary);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--color-light);
+        }
+        
+        .section {
+            padding: 5rem 2rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--color-primary);
+        }
+        
+        .languages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .language-card {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: var(--color-light);
+            border-radius: 10px;
+            border: 2px solid var(--color-primary);
+            transition: transform 0.3s;
+        }
+        
+        .language-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .language-card .flag {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .service-card .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .service-card h3 {
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .goals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .goal-card {
+            background: var(--color-light);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .goal-card .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .goal-card .amount {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--color-secondary);
+            margin-top: 1rem;
+        }
+        
+        .contact-section {
+            background: var(--color-light);
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+        
+        .contact-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+            display: inline-block;
+            padding: 1.5rem 3rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            transition: all 0.3s;
+        }
+        
+        .whatsapp-btn:hover {
+            background: #128C7E;
             transform: scale(1.05);
         }
         
         .footer {
-            text-align: center;
-            padding: 2rem;
-            background: #333;
+            background: var(--color-dark);
             color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
         }
         
         @media (max-width: 768px) {
-            .header h1 {
-                font-size: 1.8rem;
+            .hero h1 {
+                font-size: 2rem;
             }
             
-            .languages {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            .header .container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+                gap: 0.5rem;
             }
         }
     </style>
 </head>
 <body>
-    <header class="header">
-        <h1>Ibrahima Cissé Willy</h1>
-        <p>🌍 Servicios Lingüísticos Profesionales en Barcelona</p>
+    <!-- Header -->
+    <header class="header" id="inicio">
+        <div class="container">
+            <a href="#inicio" class="logo">Ibrahima Cisse</a>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#plan">Plan</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    
-    <div class="container">
-        <section class="section">
-            <h2>🗣️ Idiomas Disponibles</h2>
-            <div class="languages">
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Conecto idiomas, construyo futuro en Barcelona</h1>
+        <p>Soy Ibrahima. Hablo árabe, francés, inglés y español. Ofrezco clases, traducción e interpretación para ayudarte a comunicarte sin barreras.</p>
+        <div class="btn-group">
+            <a href="https://wa.me/34651871820?text=Hola%20Ibrahima,%20vengo%20de%20tu%20p%C3%A1gina%20web%20y%20quiero%20hablar%20sobre%20tus%20servicios%20ling%C3%BC%C3%ADsticos%20en%20Barcelona" class="btn btn-primary" target="_blank">📱 Contáctame por WhatsApp</a>
+            <a href="#plan" class="btn btn-secondary">🎯 Ver mi Plan de Reconstrucción</a>
+        </div>
+    </section>
+
+    <!-- Quién Soy -->
+    <section class="section" id="sobre-mi">
+        <div class="container">
+            <h2>Mi historia</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.1rem;">Soy Ibrahima Cisse, un apasionado de los idiomas y las culturas. Llegué a Barcelona desde un país árabe y, a pesar de los desafíos, he decidido usar mi dominio de varios idiomas como herramienta para ayudar a otras personas y construir un futuro aquí. Creo en el poder de la comunicación para unir personas.</p>
+        </div>
+    </section>
+
+    <!-- Mis Idiomas -->
+    <section class="section" style="background: var(--color-light);">
+        <div class="container">
+            <h2>Idiomas que domino</h2>
+            <div class="languages-grid">
                 <div class="language-card">
-                    <div class="flag">🇪🇸</div>
-                    <h3>Español</h3>
-                </div>
-                <div class="language-card">
-                    <div class="flag">🇨🇦</div>
-                    <h3>Català</h3>
-                </div>
-                <div class="language-card">
-                    <div class="flag">🇬🇧</div>
-                    <h3>English</h3>
+                    <div class="flag">🇸🇦</div>
+                    <h3>العربية</h3>
+                    <p><strong>Árabe (Nativo)</strong></p>
                 </div>
                 <div class="language-card">
                     <div class="flag">🇫🇷</div>
                     <h3>Français</h3>
+                    <p><strong>Francés (Avanzado)</strong></p>
                 </div>
                 <div class="language-card">
-                    <div class="flag">🇸🇦</div>
-                    <h3>العربية (Arábigo)</h3>
+                    <div class="flag">🇬🇧</div>
+                    <h3>English</h3>
+                    <p><strong>Inglés (Avanzado)</strong></p>
+                </div>
+                <div class="language-card">
+                    <div class="flag">🇪🇸</div>
+                    <h3>Español</h3>
+                    <p><strong>Español (Avanzado)</strong></p>
+                </div>
+                <div class="language-card">
+                    <div class="flag">🇪🇸</div>
+                    <h3>Català</h3>
+                    <p><strong>Catalán (Comprensión alta)</strong></p>
                 </div>
             </div>
-        </section>
-        
-        <section class="section services">
-            <h2>📋 Servicios Profesionales</h2>
-            <ul>
-                <li><strong>Clases de conversación</strong> en árabe, inglés, francés, español y catalán</li>
-                <li><strong>Traducción rápida</strong> especializada en árabe ⇄ español/catalán</li>
-                <li><strong>Intérprete presencial</strong> para citas médicas, trámites y reuniones</li>
-            </ul>
-        </section>
-    </div>
-    
-    <section class="contact">
-        <h2>📞 Contacto</h2>
-        <p>¿Necesitas ayuda con idiomas?</p>
-        <p><strong>¡Contáctame y hablamos!</strong></p>
-        <p>Disponible en Barcelona y alrededores</p>
+        </div>
     </section>
-    
+
+    <!-- Servicios -->
+    <section class="section" id="servicios">
+        <div class="container">
+            <h2>¿Cómo puedo ayudarte?</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon">🗣️</div>
+                    <h3>Clases de Conversación</h3>
+                    <p>Clases personalizadas de árabe, francés o inglés. Enfocadas en conversación real y situaciones prácticas.</p>
+                    <p><strong>Modalidad:</strong> Presencial en Barcelona u Online</p>
+                    <p><strong>Precio:</strong> A convenir / Donación</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">📄</div>
+                    <h3>Traducción Rápida</h3>
+                    <p>Traducción de documentos, emails, mensajes. Especialidad en árabe-español-francés.</p>
+                    <p><strong>Modalidad:</strong> Online o Presencial</p>
+                    <p><strong>Precio:</strong> Presupuesto según proyecto</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">🤝</div>
+                    <h3>Intérprete y Acompañante</h3>
+                    <p>Acompañamiento a citas médicas, trámites, reuniones o como guía local.</p>
+                    <p><strong>Modalidad:</strong> Presencial en Barcelona</p>
+                    <p><strong>Precio:</strong> Tarifa por hora/servicio</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plan de Reconstrucción -->
+    <section class="section" id="plan" style="background: var(--color-light);">
+        <div class="container">
+            <h2>Mi camino hacia la estabilidad</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; font-size: 1.1rem;">Con tu apoyo, puedo alcanzar estas metas que me permitirán seguir ayudando a otros:</p>
+            <div class="goals-grid">
+                <div class="goal-card">
+                    <div class="icon">📱</div>
+                    <h3>Móvil e Internet</h3>
+                    <p>Para clases online</p>
+                    <div class="amount">150€</div>
+                </div>
+                <div class="goal-card">
+                    <div class="icon">👔</div>
+                    <h3>Vestuario profesional</h3>
+                    <p>Para reuniones de trabajo</p>
+                    <div class="amount">100€</div>
+                </div>
+                <div class="goal-card">
+                    <div class="icon">🏠</div>
+                    <h3>Fondo para alojamiento</h3>
+                    <p>Primer paso a vivienda estable</p>
+                    <div class="amount">600€</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto y Apoyo -->
+    <section class="section contact-section" id="contacto">
+        <div class="container">
+            <h2>¿Cómo colaborar?</h2>
+            <div class="contact-grid">
+                <div class="contact-box">
+                    <h3>Para contratar mis servicios</h3>
+                    <a href="https://wa.me/34651871820?text=Hola%20Ibrahima,%20vengo%20de%20tu%20p%C3%A1gina%20web%20y%20quiero%20hablar%20sobre%20tus%20servicios%20ling%C3%BC%C3%ADsticos%20en%20Barcelona" class="whatsapp-btn" target="_blank">💬 Escribir a Ibrahima por WhatsApp</a>
+                    <p style="margin-top: 1rem;">Respondo rápido para consultas, presupuestos y citas.</p>
+                    <p style="margin-top: 1rem;"><strong>Teléfono/WhatsApp:</strong> +34 651 87 18 20</p>
+                </div>
+                <div class="contact-box">
+                    <h3>Para apoyar directamente</h3>
+                    <p style="margin: 1rem 0; font-size: 1.1rem;"><strong>Bizum:</strong> +34 651 87 18 20</p>
+                    <p style="margin: 1rem 0; font-size: 0.9rem;">Cada aporte me acerca a mis metas. ¡Gracias!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2025 Ibrahima Cissé Willy - Servicios Lingüísticos Barcelona</p>
-        <p>Polígota especializado en servicios de traducción, interpretación y enseñanza de idiomas</p>
+        <p style="font-size: 1.2rem; margin-bottom: 1rem;">Gracias por visitar y por creer en el poder de la comunicación humana.</p>
+        <div class="footer-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#plan">Plan</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+        <p style="margin-top: 2rem; font-size: 0.9rem;">Página web creada con solidaridad por <strong>Kristian Lucero</strong> | Contacto: kristianlucero44@gmail.com</p>
+        <p style="margin-top: 1rem;">© 2025 Ibrahima Cisse. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
