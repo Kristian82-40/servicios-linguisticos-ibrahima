@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibrahima Cissé Willy - Servicios Lingüísticos Barcelona</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .section {
+            margin: 3rem 0;
+        }
+        
+        .section h2 {
+            color: #667eea;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+        
+        .languages {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .language-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid #667eea;
+            transition: transform 0.3s ease;
+        }
+        
+        .language-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+        
+        .language-card .flag {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .services {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+        }
+        
+        .services ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .services li {
+            padding: 1rem;
+            margin: 0.5rem 0;
+            background: white;
+            border-left: 4px solid #667eea;
+            border-radius: 5px;
+            font-size: 1.1rem;
+        }
+        
+        .services li strong {
+            color: #667eea;
+        }
+        
+        .contact {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 10px;
+            margin: 3rem 0;
+        }
+        
+        .contact h2 {
+            color: white;
+            border: none;
+            margin-bottom: 1rem;
+        }
+        
+        .contact p {
+            font-size: 1.2rem;
+            margin: 1rem 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: #f8f9fa;
+            transform: scale(1.05);
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            background: #333;
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .languages {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Ibrahima Cissé Willy</h1>
+        <p>🌍 Servicios Lingüísticos Profesionales en Barcelona</p>
+    </header>
+    
+    <div class="container">
+        <section class="section">
+            <h2>🗣️ Idiomas Disponibles</h2>
+            <div class="languages">
+                <div class="language-card">
+                    <div class="flag">🇪🇸</div>
+                    <h3>Español</h3>
+                </div>
+                <div class="language-card">
+                    <div class="flag">🇨🇦</div>
+                    <h3>Català</h3>
+                </div>
+                <div class="language-card">
+                    <div class="flag">🇬🇧</div>
+                    <h3>English</h3>
+                </div>
+                <div class="language-card">
+                    <div class="flag">🇫🇷</div>
+                    <h3>Français</h3>
+                </div>
+                <div class="language-card">
+                    <div class="flag">🇸🇦</div>
+                    <h3>العربية (Arábigo)</h3>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section services">
+            <h2>📋 Servicios Profesionales</h2>
+            <ul>
+                <li><strong>Clases de conversación</strong> en árabe, inglés, francés, español y catalán</li>
+                <li><strong>Traducción rápida</strong> especializada en árabe ⇄ español/catalán</li>
+                <li><strong>Intérprete presencial</strong> para citas médicas, trámites y reuniones</li>
+            </ul>
+        </section>
+    </div>
+    
+    <section class="contact">
+        <h2>📞 Contacto</h2>
+        <p>¿Necesitas ayuda con idiomas?</p>
+        <p><strong>¡Contáctame y hablamos!</strong></p>
+        <p>Disponible en Barcelona y alrededores</p>
+    </section>
+    
+    <footer class="footer">
+        <p>&copy; 2025 Ibrahima Cissé Willy - Servicios Lingüísticos Barcelona</p>
+        <p>Polígota especializado en servicios de traducción, interpretación y enseñanza de idiomas</p>
+    </footer>
+</body>
+</html>
